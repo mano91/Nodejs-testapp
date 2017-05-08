@@ -1,6 +1,9 @@
 var express = require('express');
 var mysql = require('mysql');
 var app = express();
+var mani;
+var mano;
+var mano;
 
 
 // Binding express app to port 3000
