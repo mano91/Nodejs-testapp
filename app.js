@@ -34,7 +34,7 @@ app.get('/showSignUpPage',function(req,res){
    user     : 'root',
    password : 'root',
    database : 'littleshows'
- });
+ })
 
 
 connection.connect();
@@ -44,6 +44,6 @@ connection.query('SELECT * from user limit 10', function(err, rows, fields) {
     console.log('The solution is: ', rows);
   else
     console.log('Error while performing Query.');
-});
+})
  
 connection.end();
