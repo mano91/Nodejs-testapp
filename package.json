@@ -1,0 +1,15 @@
+{
+  "name": "nodetaskapp",
+  "version": "1.0.0",
+  "description": "My new app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mano",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2"
+  }
+}
