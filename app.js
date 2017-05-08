@@ -2,8 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var app = express();
 var mani;
-var mano;
-var mano;
+
 
 
 // Binding express app to port 3000
@@ -20,10 +19,12 @@ app.use('/style',  express.static(__dirname + '/style'));
 // ROUTES
 app.get('/',function(req,res){
     res.sendFile('home.html',{'root': __dirname + '/templates'});
+    var mano;
 })
 
 app.get('/showSignInPage',function(req,res){
     res.sendFile('signin.html',{'root': __dirname + '/templates'});
+    mano = 0;
 })
 
 app.get('/showSignUpPage',function(req,res){
