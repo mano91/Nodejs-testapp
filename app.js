@@ -1,6 +1,8 @@
 var express = require('express');
 var mysql = require('mysql');
 var app = express();
+var mani;
+
 
 
 // Binding express app to port 3000
@@ -17,10 +19,12 @@ app.use('/style',  express.static(__dirname + '/style'));
 // ROUTES
 app.get('/',function(req,res){
     res.sendFile('home.html',{'root': __dirname + '/templates'});
+    var mano;
 })
 
 app.get('/showSignInPage',function(req,res){
     res.sendFile('signin.html',{'root': __dirname + '/templates'});
+    mano = 0;
 })
 
 app.get('/showSignUpPage',function(req,res){
@@ -34,7 +38,7 @@ app.get('/showSignUpPage',function(req,res){
    user     : 'root',
    password : 'root',
    database : 'littleshows'
- });
+ })
 
 
 connection.connect();
@@ -44,6 +48,6 @@ connection.query('SELECT * from user limit 10', function(err, rows, fields) {
     console.log('The solution is: ', rows);
   else
     console.log('Error while performing Query.');
-});
+})
  
 connection.end();
